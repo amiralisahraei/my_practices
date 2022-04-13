@@ -1,3 +1,8 @@
+from cgi import print_arguments
+from pickletools import pystring
+from time import process_time_ns
+
+from pydantic import NumberNotGeError
 from data import teams
 
 
@@ -131,5 +136,62 @@ for i in ziped:
         break
     tmp += i[0]
 
-print(tmp)
+# print(tmp)
+# ////////////////////////////////////////////
+# user_input = input("enter your number")
 
+# try:
+#     user_age = int(user_input)
+# except:
+#     print("except fired")
+# else:
+#     print("else fired")
+# finally:
+#     print("finally fired")
+# /////////////////////////////////////////////////
+
+# def number_generator():
+#     for i in range(100):
+#         if i % 7 == 0:
+#             yield i
+    
+#     print("finished")
+
+# list_number = number_generator()
+# for i in list_number:
+#     print(i)
+
+# with open("amirali.csv", 'w') as f:
+#     for i in range(100):
+#         f.write(f"sample user data : {i} \n")
+
+# def reader(filename):
+#     file_ = open(filename, 'r')
+#     data = file_.read().split('\n')
+#     file_.close()
+#     return data
+
+# for i in reader('amirali.csv'):
+#     print(i)
+
+# def reader_generator(filename):
+#     for i in open(filename, 'r'):
+#         yield i
+
+# for i in reader_generator('amirali.csv'):
+#     print(i)
+
+def counter_generater():
+    for i in range(100):
+        if i % 2 == 0:
+            yield i
+
+def counter():
+    for i in range(100):
+        if i % 2 == 0:
+            print(i)
+
+for i in counter():
+    print(i)
+
+# ///////////////////////////////////////////////////////
