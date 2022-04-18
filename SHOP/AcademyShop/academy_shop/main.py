@@ -1,4 +1,3 @@
-from cgi import print_arguments
 import string
 from random import choices
 import sys
@@ -25,6 +24,7 @@ def create_password(length=8, upper=False, lower=False, digit=False, pun=False):
 
     return ''.join(choices(pool, k=length))
 
+
 if __name__ == "__main__":
     # try:
     #     length = int(sys.argv[1])
@@ -42,4 +42,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     print(create_password(args.length, args.upper, args.lower, args.digit, args.pun))
+
+    
 
